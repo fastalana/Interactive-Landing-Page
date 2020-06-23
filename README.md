@@ -1,5 +1,5 @@
 # Interactive Landing Page
-This is a a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.
+This is a a multi-section landing page, with a dynamically updating navigational menu based on the amount of content that is added to the page.  A live preview of this site can be viewed [here](https://fastalana.github.io/Interactive-Landing-Page/).
 
 
 ## Instructions
