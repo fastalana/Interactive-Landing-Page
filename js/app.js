@@ -14,15 +14,19 @@
 */
 
 // Global Variables
-
 const navigationElements = document.querySelectorAll('section')
 const navigationList = document.getElementById('navbar__list')
 
-// Build a menu by iterating through the NavigationElements
+// Build a menu of sections by iterating through the NavigationElements
+// Example: 
+/*  <li class="menu__link" data-link="section1">
+        <a href="section1">Section 1</a>
+    </li> */
 navigationElements.forEach(element => {
-  const navigationListElement = `<li class='menu__link ${element.className}' data-link=${element.id}><a href="#${element.id}">${element.dataset.nav}</li>`
+  const navigationListElement = `<li class='menu__link ${element.className}' data-link=${element.id}><a href="${element.id}">${element.dataset.nav}</li>`
   navigationList.insertAdjacentHTML('beforeend', navigationListElement)
 })
+
 
 // Scroll to the section by listenting to a click-event in the NavigationList
 navigationList.addEventListener('click', event => {
@@ -66,7 +70,6 @@ const options = {
   
 // Setting an observer with options and a callback which checks if the navigation element should be active
 const observer = new IntersectionObserver(callback, options)
-// const observer = new IntersectionObserver(callback)
 navigationElements.forEach(element => {
     observer.observe(document.getElementById(element.id))
   })
