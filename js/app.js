@@ -13,27 +13,16 @@
  * 
 */
 
-/**
- * Define Global Variables
- * 
-*/
+// Global Variables 
+const navigationElements = document.querySelectorAll('section')
+const navigationList = document.getElementById('navbar__list')
 
+// Build the navigation
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
-*/
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
+// navigationElements.forEach(el => {
+//     const navlistElement = `<li class='menu__link ${el.className}' data-link=${el.id}><a href="#${el.id}">${el.dataset.nav}</li>`
+//     navList.insertAdjacentHTML('beforeend', navlistElement)
+//   })
 
 
 // Add class 'active' to section when near top of viewport
@@ -53,5 +42,4 @@
 // Scroll to section on link click
 
 // Set sections as active
-
 
