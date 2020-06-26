@@ -58,15 +58,15 @@ const callback = entries => {
   }
   
 // Options for the observer. Used in the IntersectionObserver function.
-// const options = {
-//     root: null,
-//     rootMargin: '0px',
-//     threshold: 0.6,
-//   }
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.6,
+  }
   
 // Setting an observer with options and a callback which checks if the navigation element should be active
-// const observer = new IntersectionObserver(callback, options)
-const observer = new IntersectionObserver(callback)
+const observer = new IntersectionObserver(callback, options)
+// const observer = new IntersectionObserver(callback)
 navigationElements.forEach(element => {
     observer.observe(document.getElementById(element.id))
   })
