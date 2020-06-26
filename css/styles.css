@@ -82,8 +82,7 @@ section {
     font-weight: bold;
 }
 
-.navbar__menu .menu__link.active a,
-.navbar__menu .menu__link.active a:link {
+.navbar__menu .menu__link.active a{
   color: #000000;
   text-decoration: underline;
 }
