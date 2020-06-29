@@ -30,17 +30,22 @@ navigationElements.forEach(element => {
 // When the target meets a threshold specified for the IntersectionObserver, the callback is invoked.
 let callback = (entries, observer) => {
   entries.forEach(entry => {
-    // Each entry describes an intersection change for one observed
-    // target element:
-    //   entry.boundingClientRect
-    //   entry.intersectionRatio
-    //   entry.intersectionRect
-    //   entry.isIntersecting
-    //   entry.rootBounds
-    //   entry.target
-    //   entry.time
-  });
-};
+    const navigationListElement = document.querySelector(".menu__link [data-link='${entry.target.id']")  // captures the current navigation element 
+    const section = document.getElementById(entry.target.id)  // and finds the cooresponding section
+
+    if (entry && entry.isIntersecting) {  // If the target is intersecting the root, make the <section> and the <li> tag have an "active" class
+      navigationListElement.classList.add('active')
+      section.classList.add('active')
+    } else {
+      if (navigationListElement.classList.contains('active')){
+        navigationListElement.classList.remove('active')
+      }
+      if (section.classList.contains('active')){
+        section.classList.remove('active')
+      }
+    }
+  })
+}
 
 // Options object that will be passed into the IntersectionObserver() constructor
 // Controls the when the callback is invoked
