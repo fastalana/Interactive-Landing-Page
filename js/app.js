@@ -26,6 +26,8 @@ navigationElements.forEach(element => {
 
 // Show what section from the navigation has been selected 
 // and/or is being viewed while scrolling
+
+// When the target meets a threshold specified for the IntersectionObserver, the callback is invoked.
 let callback = (entries, observer) => {
   entries.forEach(entry => {
     // Each entry describes an intersection change for one observed
@@ -49,6 +51,11 @@ let options = {
 }
 
 let observer = new IntersectionObserver(callback, options);
-let target = document.querySelector('#listItem');
-observer.observe(target);
+
+// Target element to watch in the IntersectionObserver
+navigationElements.forEach(element => {
+  let target = document.getElementById(element.id)
+  observer.observe(target);
+})
+
 
