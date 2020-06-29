@@ -28,9 +28,9 @@ navigationElements.forEach(element => {
 // and/or is being viewed while scrolling
 
 // When the target meets a threshold specified for the IntersectionObserver, the callback is invoked.
-let callback = (entries, observer) => {
-  entries.forEach(entry => {
-    const navigationListElement = document.querySelector(".menu__link [data-link='${entry.target.id']")  // captures the current navigation element 
+let callback = entries => {
+  entries.forEach(entry => { 
+    const navigationListElement = document.querySelector(`.menu__link[data-link='${entry.target.id}']`) // captures the current navigation element
     const section = document.getElementById(entry.target.id)  // and finds the cooresponding section
 
     if (entry && entry.isIntersecting) {  // If the target is intersecting the root, make the <section> and the <li> tag have an "active" class
@@ -52,7 +52,7 @@ let callback = (entries, observer) => {
 let options = {
   root: null, // Element that is used as the viewport for checking visibility of the target; null = defaults to the browser default
   rootMargin: '0px', // Margin around the root
-  threshold: 1.0  //  The percentage of the target's visibility the observer's callback should be executed
+  threshold: 0.8  //  The percentage of the target's visibility the observer's callback should be executed
 }
 
 let observer = new IntersectionObserver(callback, options);
