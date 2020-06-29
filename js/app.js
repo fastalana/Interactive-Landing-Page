@@ -19,8 +19,5 @@ const navigationList = document.getElementById('navbar__list');  //captures the 
 
 navigationElements.forEach(element => {
   const navigationListElement = `<li class='menu__link' data-link=${element.id}><a href="#${element.id}">${element.dataset.nav}</li>`
-  // navigationList.insertAdjacentHTML('afterend', navigationListElement)  // ascending, aligned left
-  // navigationList.insertAdjacentHTML('beforebegin', navigationListElement) // descending, aligned left
-  navigationList.insertAdjacentHTML('beforeend', navigationListElement) // ascending, aligned right
-  // navigationList.insertAdjacentHTML('afterbegin', navigationListElement) // descending, aligned left
+  navigationList.insertAdjacentHTML('beforeend', navigationListElement) // 'beforeend': Just inside the element (li), after its last child.
 })
