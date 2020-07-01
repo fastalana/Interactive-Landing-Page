@@ -6,7 +6,7 @@ This is a a multi-section landing page, with a dynamically updating navigational
 
 This code was created for a project for the Udacity Front End Nanodegree.  Resource links are listed below:
 
-* [Introduction to Programming](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
+* [Front End Web Developer](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd0011)
 * [Starter code](https://github.com/udacity/fend/tree/refresh-2019)
 * [Rubric](https://review.udacity.com/#!/rubrics/2658/view)
 
